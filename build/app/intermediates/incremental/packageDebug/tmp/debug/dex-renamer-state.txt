@@ -1,0 +1,4 @@
+#Mon Mar 29 16:29:15 NZDT 2021
+base.0=/Users/kimseongjae/source/medihere_patient/medihere_patient/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
