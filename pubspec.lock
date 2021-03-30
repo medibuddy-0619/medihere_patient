@@ -324,7 +324,7 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: c80a2482367ebdff8d6643c3fbb74bf8e9cfffd8
+      resolved-ref: "95261e67266f1d5620f33a70cd856cba757fb5d2"
       url: "https://github.com/jhpung/medihere_ui.git"
     source: git
     version: "0.0.3"

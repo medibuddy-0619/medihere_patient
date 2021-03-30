@@ -279,7 +279,7 @@
     },
     {
       "name": "medihere_ui",
-      "rootUri": "file:///Users/kimseongjae/Developer/flutter/.pub-cache/git/medihere_ui-c80a2482367ebdff8d6643c3fbb74bf8e9cfffd8/",
+      "rootUri": "file:///Users/kimseongjae/Developer/flutter/.pub-cache/git/medihere_ui-95261e67266f1d5620f33a70cd856cba757fb5d2/",
       "packageUri": "lib/",
       "languageVersion": "2.7"
     },
@@ -470,7 +470,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-03-29T08:16:32.740872Z",
+  "generated": "2021-03-30T02:50:31.233851Z",
   "generator": "pub",
   "generatorVersion": "2.12.2"
 }

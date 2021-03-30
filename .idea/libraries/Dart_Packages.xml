@@ -327,7 +327,7 @@
         <entry key="medihere_ui">
           <value>
             <list>
-              <option value="$USER_HOME$/Developer/flutter/.pub-cache/git/medihere_ui-c80a2482367ebdff8d6643c3fbb74bf8e9cfffd8/lib" />
+              <option value="$USER_HOME$/Developer/flutter/.pub-cache/git/medihere_ui-95261e67266f1d5620f33a70cd856cba757fb5d2/lib" />
             </list>
           </value>
         </entry>
@@ -544,7 +544,7 @@
       </option>
     </properties>
     <CLASSES>
-      <root url="file://$USER_HOME$/Developer/flutter/.pub-cache/git/medihere_ui-c80a2482367ebdff8d6643c3fbb74bf8e9cfffd8/lib" />
+      <root url="file://$USER_HOME$/Developer/flutter/.pub-cache/git/medihere_ui-95261e67266f1d5620f33a70cd856cba757fb5d2/lib" />
       <root url="file://$USER_HOME$/Developer/flutter/.pub-cache/hosted/pub.dartlang.org/_fe_analyzer_shared-12.0.0/lib" />
       <root url="file://$USER_HOME$/Developer/flutter/.pub-cache/hosted/pub.dartlang.org/analyzer-0.40.6/lib" />
       <root url="file://$USER_HOME$/Developer/flutter/.pub-cache/hosted/pub.dartlang.org/args-1.6.0/lib" />
