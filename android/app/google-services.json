@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "446930989465",
+    "project_id": "medibuddy-305302",
+    "storage_bucket": "medibuddy-305302.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:446930989465:android:e498e179c7ec61d5dfe308",
+        "android_client_info": {
+          "package_name": "com.example.medihere_patient"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "446930989465-l3kt30a1nck3l3u9fpge7vk5po2ubdmq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQx318yV5X7yYZVqBUuOOcOAIe-j5Hiqo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "446930989465-l3kt30a1nck3l3u9fpge7vk5po2ubdmq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

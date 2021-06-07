@@ -1,5 +1,4 @@
 import 'package:bloc/bloc.dart';
-import 'package:rxdart/rxdart.dart';
 
 class StartScreenBloc extends Bloc{
   StartScreenBloc(initialState) : super(initialState);
