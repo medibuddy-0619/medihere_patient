@@ -5,6 +5,12 @@ import 'package:flutter/material.dart';
 import 'package:medihere_patient/src/widgets/custom_base_view.dart';
 import 'package:medihere_ui/medihere_ui.dart';
 
+
+import 'package:medihere_patient/src/provider/google_sign_in.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:provider/provider.dart'; 
+
 class StartScreenView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -18,7 +24,7 @@ class StartScreenView extends StatelessWidget {
             _buildSolidBlueButton(
                 name: '로그인', onPressed: () => print('login')),
             _buildKakaoButton(),
-            _buildGoogleButton(),
+            _buildGoogleButton(context),
             Platform.isIOS ? _buildAppleButton() : Container(),
             _buildSolidBlueButton(
                 name: '이메일로 가입하기', onPressed: () => print('이메일')),
@@ -123,7 +129,7 @@ class StartScreenView extends StatelessWidget {
     );
   }
 
-  Widget _buildGoogleButton() {
+  Widget _buildGoogleButton(BuildContext context) {
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.only(bottom: 8.0),
@@ -136,7 +142,11 @@ class StartScreenView extends StatelessWidget {
             'Google로 가입하기',
             style: MTextStyles.bold[21]!.copyWith(color: MTextColors.primary),
           ),
-        onPressed: () => print('test'),
+        onPressed: (){
+          print('test');
+          final provider = Provider.of<GoogleSignInProvider>(context, listen: false);
+          provider.googleLogin();
+        }
       )
     );
   }
