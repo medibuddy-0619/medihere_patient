@@ -1,9 +1,11 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:medihere_patient/src/service/storage_util.dart';
 
 class GoogleSignInProvider extends ChangeNotifier {
   final googleSignIn = GoogleSignIn();
+  final StorageUtil _storageUtil = StorageUtil();
 
   GoogleSignInAccount? _user;
 
@@ -21,9 +23,8 @@ class GoogleSignInProvider extends ChangeNotifier {
       idToken: googleAuth.idToken,
     );
 
+    _storageUtil.setAccessToken(credential.accessToken!);
     await FirebaseAuth.instance.signInWithCredential(credential);
-
     notifyListeners();
-    print(_user);
   }
 }
