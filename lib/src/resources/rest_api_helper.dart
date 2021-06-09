@@ -7,6 +7,4 @@ import 'package:medihere_patient/src/services/locator.dart';
 class APIHelper {
   final Client _client = Client();
   final APIEndpoint apiEndpoint = locator<APIEndpoint>();
-
-
 }

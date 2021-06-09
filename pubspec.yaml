@@ -46,6 +46,8 @@ dependencies:
 
   google_sign_in: ^5.0.4
   provider: ^5.0.0
+  apple_sign_in: ^0.1.0
+  device_info: ^2.0.2
 
 dev_dependencies:
   injectable_generator:

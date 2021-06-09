@@ -5,11 +5,11 @@ import 'package:flutter/material.dart';
 import 'package:medihere_patient/src/widgets/custom_base_view.dart';
 import 'package:medihere_ui/medihere_ui.dart';
 
-
 import 'package:medihere_patient/src/provider/google_sign_in.dart';
+import 'package:medihere_patient/src/provider/apple_sign_in.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:provider/provider.dart'; 
+import 'package:provider/provider.dart';
 
 class StartScreenView extends StatelessWidget {
   @override
@@ -21,11 +21,10 @@ class StartScreenView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             _buildIntroText(),
-            _buildSolidBlueButton(
-                name: '로그인', onPressed: () => print('login')),
+            _buildSolidBlueButton(name: '로그인', onPressed: () => print('login')),
             _buildKakaoButton(),
             _buildGoogleButton(context),
-            Platform.isIOS ? _buildAppleButton() : Container(),
+            Platform.isIOS ? _buildAppleButton(context) : Container(),
             _buildSolidBlueButton(
                 name: '이메일로 가입하기', onPressed: () => print('이메일')),
             InkWell(
@@ -131,40 +130,45 @@ class StartScreenView extends StatelessWidget {
 
   Widget _buildGoogleButton(BuildContext context) {
     return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.only(bottom: 8.0),
-      child: MOutlinedButton.gray(
-        size: ButtonSize.xl,
-        buttonStyle: ButtonUtil.sizeToOutlinedGrayStyle(ButtonSize.xl).copyWith(
-            side: MaterialStateProperty.all(
-                BorderSide(color: MColors.gray[60]!))),
-          child: Text(
-            'Google로 가입하기',
-            style: MTextStyles.bold[21]!.copyWith(color: MTextColors.primary),
-          ),
-        onPressed: (){
-          print('test');
-          final provider = Provider.of<GoogleSignInProvider>(context, listen: false);
-          provider.googleLogin();
-        }
-      )
-    );
+        width: double.infinity,
+        padding: const EdgeInsets.only(bottom: 8.0),
+        child: MOutlinedButton.gray(
+            size: ButtonSize.xl,
+            buttonStyle: ButtonUtil.sizeToOutlinedGrayStyle(ButtonSize.xl)
+                .copyWith(
+                    side: MaterialStateProperty.all(
+                        BorderSide(color: MColors.gray[60]!))),
+            child: Text(
+              'Google로 가입하기',
+              style: MTextStyles.bold[21]!.copyWith(color: MTextColors.primary),
+            ),
+            onPressed: () {
+              print('test');
+              final provider =
+                  Provider.of<GoogleSignInProvider>(context, listen: false);
+              provider.googleLogin();
+            }));
   }
 
-  Widget _buildAppleButton() {
+  Widget _buildAppleButton(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 8.0),
       child: Container(
           width: double.infinity,
           height: 48,
           child: TextButton(
-            style: ButtonStyle(
-              backgroundColor: MaterialStateProperty.all(MColors.gray[700]),
-              overlayColor: MaterialStateProperty.all(MColors.gray[900]),
-            ),
-            child: Text('Apple로 가입하기', style: MTextStyles.bold[21]!.copyWith(color: Colors.white)),
-            onPressed: () => print('Apple'),
-          )),
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(MColors.gray[700]),
+                overlayColor: MaterialStateProperty.all(MColors.gray[900]),
+              ),
+              child: Text('Apple로 가입하기',
+                  style: MTextStyles.bold[21]!.copyWith(color: Colors.white)),
+              onPressed: () {
+                print('Apple');
+                final provider =
+                    Provider.of<AppleSignInProvider>(context, listen: false);
+                provider.appleLogin();
+              })),
     );
   }
 }

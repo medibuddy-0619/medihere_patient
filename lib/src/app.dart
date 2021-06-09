@@ -4,14 +4,20 @@ import 'package:medihere_patient/src/ui/register_screen/password_register_screen
 import 'package:medihere_patient/src/ui/start_screen/start_screen_view.dart';
 
 import 'package:medihere_patient/src/provider/google_sign_in.dart';
+import 'package:medihere_patient/src/provider/apple_sign_in.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:provider/provider.dart';
 
 class App extends StatelessWidget {
   @override
-  Widget build(BuildContext context) => ChangeNotifierProvider(
-        create: (context) => GoogleSignInProvider(),
+  Widget build(BuildContext context) => MultiProvider(
+        providers: [
+          ChangeNotifierProvider<GoogleSignInProvider>(
+              create: (_) => GoogleSignInProvider()),
+          ChangeNotifierProvider<AppleSignInProvider>(
+              create: (_) => (AppleSignInProvider())),
+        ],
         child: MaterialApp(
           initialRoute: '/',
           routes: {
