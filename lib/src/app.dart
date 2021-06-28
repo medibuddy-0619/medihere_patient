@@ -22,8 +22,10 @@ class _AppState extends State<App> {
 
   @override
   Widget build(BuildContext context) {
+    bool test = true;
+
     return MaterialApp(
-        initialRoute: Provider.of<InitStateProvider>(context, listen: false).isLogin ? '/' : '/main',
+        initialRoute: test ? '/' : '/main',
         routes: {
         '/': (context) => StartScreenView(),
         '/emailRegister': (context) => EmailRegisterScreenView(),

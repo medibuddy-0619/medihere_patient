@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class CustomBaseView extends StatelessWidget {
-  final AppBar? appBar;
+  final AppBar appBar;
   final Widget body;
-  const CustomBaseView({Key? key, this.appBar, required this.body}) : super(key: key);
+  const CustomBaseView({Key key, this.appBar, @required this.body}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

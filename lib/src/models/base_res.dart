@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:json_annotation/json_annotation.dart';
 part 'base_res.g.dart';
 
@@ -7,7 +8,7 @@ class BaseRes {
   String message;
   dynamic data;
 
-  BaseRes({required this.type, required this.message, this.data});
+  BaseRes({@required this.type, @required this.message, this.data});
 
   factory BaseRes.fromJson(Map<String, dynamic> json) =>
       _$BaseResFromJson(json);

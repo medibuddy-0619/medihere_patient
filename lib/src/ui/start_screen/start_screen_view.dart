@@ -43,13 +43,13 @@ class StartScreenView extends StatelessWidget {
               RichText(
                 textAlign: TextAlign.center,
                 text: TextSpan(
-                  style: MTextStyles.regular[12]!
+                  style: MTextStyles.regular[12]
                       .copyWith(color: MTextColors.secondary),
                   children: [
                     TextSpan(text: '매디코디를 가입하게 되면 '),
                     TextSpan(
                         text: '이용약관',
-                        style: MTextStyles.bold[12]!.copyWith(
+                        style: MTextStyles.bold[12].copyWith(
                           decoration: TextDecoration.underline,
                         ),
                         recognizer: TapGestureRecognizer()
@@ -59,7 +59,7 @@ class StartScreenView extends StatelessWidget {
                     TextSpan(text: '과 \n'),
                     TextSpan(
                         text: '개인정보처리방침 ',
-                        style: MTextStyles.bold[12]!.copyWith(
+                        style: MTextStyles.bold[12].copyWith(
                           decoration: TextDecoration.underline,
                         ),
                         recognizer: TapGestureRecognizer()
@@ -69,7 +69,7 @@ class StartScreenView extends StatelessWidget {
                     TextSpan(text: '및 '),
                     TextSpan(
                         text: '마케팅 수신',
-                        style: MTextStyles.bold[12]!.copyWith(
+                        style: MTextStyles.bold[12].copyWith(
                           decoration: TextDecoration.underline,
                         ),
                         recognizer: TapGestureRecognizer()
@@ -99,7 +99,7 @@ class StartScreenView extends StatelessWidget {
   }
 
   Widget _buildSolidBlueButton(
-      {required String name, required Function() onPressed}) {
+      {@required String name, @required Function() onPressed}) {
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.only(bottom: 8),
@@ -121,7 +121,7 @@ class StartScreenView extends StatelessWidget {
         size: ButtonSize.xl,
         child: Text(
           '카카오로 가입하기',
-          style: MTextStyles.bold[21]!.copyWith(color: MTextColors.primary),
+          style: MTextStyles.bold[21].copyWith(color: MTextColors.primary),
         ),
         onPressed: () {
           print('aaa');
@@ -138,10 +138,10 @@ class StartScreenView extends StatelessWidget {
         size: ButtonSize.xl,
         buttonStyle: ButtonUtil.sizeToOutlinedGrayStyle(ButtonSize.xl).copyWith(
             side: MaterialStateProperty.all(
-                BorderSide(color: MColors.gray[60]!))),
+                BorderSide(color: MColors.gray[60]))),
           child: Text(
             'Google로 가입하기',
-            style: MTextStyles.bold[21]!.copyWith(color: MTextColors.primary),
+            style: MTextStyles.bold[21].copyWith(color: MTextColors.primary),
           ),
         onPressed: (){
           print('test');
@@ -163,7 +163,7 @@ class StartScreenView extends StatelessWidget {
               backgroundColor: MaterialStateProperty.all(MColors.gray[700]),
               overlayColor: MaterialStateProperty.all(MColors.gray[900]),
             ),
-            child: Text('Apple로 가입하기', style: MTextStyles.bold[21]!.copyWith(color: Colors.white)),
+            child: Text('Apple로 가입하기', style: MTextStyles.bold[21].copyWith(color: Colors.white)),
             onPressed: () => print('Apple'),
           )),
     );

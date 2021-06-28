@@ -7,9 +7,9 @@ class GoogleSignInProvider extends ChangeNotifier {
   final googleSignIn = GoogleSignIn();
   final StorageUtil _storageUtil = StorageUtil();
 
-  GoogleSignInAccount? _user;
+  GoogleSignInAccount _user;
 
-  GoogleSignInAccount get user => _user!;
+  GoogleSignInAccount get user => _user;
 
   Future googleLogin() async {
     final googleUser = await googleSignIn.signIn();
@@ -23,7 +23,7 @@ class GoogleSignInProvider extends ChangeNotifier {
       idToken: googleAuth.idToken,
     );
 
-    _storageUtil.setAccessToken(credential.accessToken!);
+    _storageUtil.setAccessToken(credential.accessToken);
     await FirebaseAuth.instance.signInWithCredential(credential);
     notifyListeners();
   }

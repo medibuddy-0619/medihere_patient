@@ -13,7 +13,7 @@ class EmailRegisterScreenView extends StatelessWidget {
         automaticallyImplyLeading: true,
         centerTitle: true,
         leading: Icon(Icons.arrow_back_ios_outlined, color: MTextColors.primary,),
-        title: Text('회원가입', style: MTextStyles.bold[16]!.copyWith(color: MTextColors.primary),
+        title: Text('회원가입', style: MTextStyles.bold[16].copyWith(color: MTextColors.primary),
       )),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(16,24,16,16),
@@ -22,7 +22,7 @@ class EmailRegisterScreenView extends StatelessWidget {
           mainAxisSize: MainAxisSize.max,
           children: [
             Text('이메일을 입력해 주세요.', style: MTextStyles.bold[24],),
-            Text('로그인에 필요합니다.', style: MTextStyles.medium[14]!.copyWith(color: MTextColors.teriary,)),
+            Text('로그인에 필요합니다.', style: MTextStyles.medium[14].copyWith(color: MTextColors.teriary,)),
             SizedBox(
               height: 16,
             ),
